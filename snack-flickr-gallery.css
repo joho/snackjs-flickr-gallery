@@ -1,22 +1,24 @@
 .snack-flickr-gallery {
-  width: 500px;
-  height: 500px;
-  border: solid 1px yellow;
+  width: 330px;
+  height: 330px;
   
   overflow: hidden;
   position: relative;
+  display: table-cell;
+  vertical-align: center;
 }
 
   .snack-flickr-gallery img {
     position: absolute;
-    top: 0;
-    left: -400px;
     z-index: 1;
     opacity: 0;
+
+    transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -webkit-transition: opacity 1s ease-in-out;
   }
 
   .snack-flickr-gallery img.active {
-    left: 0;
     z-index: 9;
     opacity: 1;
   }
