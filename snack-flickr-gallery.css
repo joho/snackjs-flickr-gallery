@@ -1,0 +1,22 @@
+.snack-flickr-gallery {
+  width: 500px;
+  height: 500px;
+  border: solid 1px yellow;
+  
+  overflow: hidden;
+  position: relative;
+}
+
+  .snack-flickr-gallery img {
+    position: absolute;
+    top: 0;
+    left: -400px;
+    z-index: 1;
+    opacity: 0;
+  }
+
+  .snack-flickr-gallery img.active {
+    left: 0;
+    z-index: 9;
+    opacity: 1;
+  }
