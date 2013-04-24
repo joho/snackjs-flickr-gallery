@@ -33,10 +33,8 @@
           }
         });
 
-        // var anyImagesCurrentlyActive = false;
         // set up the animation delay
         var slideshowRotation = setInterval(function () {
-          console.log("should transition image now");
           var images, currentImage, nextImage;
 
           images = element.getElementsByTagName('img');
@@ -44,7 +42,6 @@
             currentImage = images[i];
             
             if (currentImage.className.indexOf('active') > -1) {
-              console.log("Found active image at index " + i);
               // figure out next image
               nextImage = images[i + 1];
               if (typeof(nextImage) === 'undefined') {
@@ -58,13 +55,6 @@
             }
           }
 
-          // if (!anyImagesCurrentlyActive) {
-          //   console.log("setting first image active");
-          //   snack.wrap(images[0]).addClass("active");
-          //   anyImagesCurrentlyActive = true;
-          // }
-
-          // clearInterval(slideshowRotation);
         }, 3000);
 
       }); // end jsonp
