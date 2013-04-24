@@ -1,6 +1,7 @@
 ;(function () {
   "use strict";
 
+  // Make sure setInterval works but good on IE. See:
   // http://stackoverflow.com/questions/8044433/why-does-twitter-redefine-window-settimeout-and-window-setinterval
   window.setInterval = window.setInterval;
 
@@ -51,7 +52,7 @@
       if (currentImage.className.indexOf('active') > -1) {
         // figure out next image
         nextImage = images[i + 1];
-        if (typeof(nextImage) === 'undefined') {
+        if (typeof(nextImage) === 'undefined' || nextImage == null) {
           nextImage = images[0];
         }
         
