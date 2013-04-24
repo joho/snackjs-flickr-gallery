@@ -1,7 +1,7 @@
 SnackJS Flickr Gallery
 ===
 
-A very, very simple Flickr gallery built using SnackJS for the JSONP/Element finding stuff and CSS3 Animations for the smooth, smooth transitions.
+A very, very simple Flickr gallery built using [SnackJS](https://github.com/rpflorence/snack) for the JSONP/Element finding stuff and CSS3 Animations for the smooth, smooth transitions.
 
 To use, take the stylesheet & js from the project and put them wherever you put such things in your project, then link to them. I do it kinda like:
 
@@ -19,6 +19,11 @@ If you want to get fancy and pass some extra options to the Flickr feed API you 
     <div class="snack-flickr-gallery" data-user-id="86448492@N00" data-tags="everydamnedshirt"></div>
 
 If you have no idea what your user id is (I didn't) then you can plug your username in at [idgettr](everydamnedshirt)
+
+Browser Support
+---
+
+I have no idea. I tried to be conservative with my js & css, and am using a cross browser selector thingo for SnackJS, but I was too lazy to test it.
 
 Who?
 ---
