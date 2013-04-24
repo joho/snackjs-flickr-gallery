@@ -5,6 +5,8 @@
   // http://stackoverflow.com/questions/8044433/why-does-twitter-redefine-window-settimeout-and-window-setinterval
   window.setInterval = window.setInterval;
 
+  var secondsPerImage = 3;
+
   var extractParamsFromDataAttributes = function (galleryElement) {
     // always set format or we get xml back :(
     var params = { format: "json" }; 
@@ -81,7 +83,7 @@
         // set up the animation delay
         var slideshowRotation = setInterval(function () {
           cycleImagesInGallery(element);
-        }, 3000);
+        }, secondsPerImage * 1000);
 
       }); // end jsonp
 
