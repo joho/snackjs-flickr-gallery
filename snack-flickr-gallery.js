@@ -72,17 +72,24 @@
     galleryDivs.each(function (element) {
       var params = extractParamsFromDataAttributes(element);
 
+      // place all images in a postion: relative container
+      // so that the outer gallery div can be position:static
+      // and flow with the document
+      var imagesContainer = document.createElement("div");
+      snack.wrap(imagesContainer).addClass("flickr-images-container");
+      element.appendChild(imagesContainer);
+
       snack.JSONP({
         url: "http://api.flickr.com/services/feeds/photos_public.gne",
         key: "jsoncallback",
         data: params
       }, function (response) {
         // insert images as soon as we get them
-        insertImagesIntoGallery(element, response.items);
+        insertImagesIntoGallery(imagesContainer, response.items);
 
         // set up the animation delay
         var slideshowRotation = setInterval(function () {
-          cycleImagesInGallery(element);
+          cycleImagesInGallery(imagesContainer);
         }, secondsPerImage * 1000);
 
       }); // end jsonp

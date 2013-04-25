@@ -3,10 +3,13 @@
   height: 380px;
   
   overflow: hidden;
-  position: relative;
-  display: table-cell;
-  vertical-align: center;
 }
+
+  .snack-flickr-gallery .flickr-images-container {
+    position: relative;
+    display: table-cell;
+    vertical-align: center;
+  }
 
   .snack-flickr-gallery img {
     position: absolute;
