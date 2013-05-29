@@ -8,7 +8,7 @@
   .snack-flickr-gallery .flickr-images-container {
     position: relative;
     display: table-cell;
-    vertical-align: center;
+    vertical-align: middle;
   }
 
   .snack-flickr-gallery img {
