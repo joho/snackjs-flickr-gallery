@@ -28,7 +28,7 @@ I have no idea. I tried to be conservative with my js & css, and am using a cros
 Who?
 ---
 
-[John Barton](http://whoisjohnbarton.com) made this.
+[John Barton](https://johnbarton.co/) made this.
 
 Why?
 ---
